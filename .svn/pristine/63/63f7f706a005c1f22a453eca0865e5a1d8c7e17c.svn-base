@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.EF;
+using DataModel.Dao;
+using OnlineShop.Common;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+    
+    public class CategoryController : BaseController
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        // GET: Admin/Category
+        [HttpGet]
+        public ActionResult Index(string SearchString , int page = 1, int pageSize = 5)
+        {
+            CategoryDao dao = new CategoryDao();
+            return View(dao.GetCategory(SearchString, page, pageSize));
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Category categoryDTO)
+        {
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            var dao = new CategoryDao();
+            dao.Create(categoryDTO, session.UserName);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            return View(db.Categories.FirstOrDefault(n => n.ID == id));
+        }
+        [HttpPost]
+        public ActionResult Edit(Category categoryDTO)
+        {
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            var dao = new CategoryDao();
+            dao.Edit(categoryDTO, session.UserName);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Delete(long id)
+        {
+            var dao = new CategoryDao();
+            dao.Delete(id);
+            return RedirectToAction("Index");
+        }
+    }
+}

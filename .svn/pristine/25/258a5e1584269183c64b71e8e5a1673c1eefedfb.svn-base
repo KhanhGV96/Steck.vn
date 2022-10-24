@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.EF;
+using DataModel.Dao;
+using PagedList;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+
+    public class GroupsController : BaseController
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        // GET: Admin/Groups
+        public ActionResult Index(string SearchString, int page = 1, int pagesize = 5)
+        {
+            IQueryable<UserGroup> model = db.UserGroups;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                model = model.Where(n => n.Name.Contains(SearchString)|| n.ID.Contains(SearchString));
+            }
+            IEnumerable<UserGroup> model1 = model.OrderByDescending(n => n.ID).ToPagedList(page, pagesize);
+            return View(model1);
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            UserGroup ug = new UserGroup();
+            return View(ug);
+        }
+        [HttpPost]
+        public ActionResult Create(UserGroup userGroupDTO)
+        {
+            GroupDao groupDao = new GroupDao();
+            groupDao.Insert(userGroupDTO);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+
+            return View(db.UserGroups.SingleOrDefault(n => n.ID == id));
+        }
+        [HttpPost]
+        public ActionResult Edit(UserGroup userGroupDTO)
+        {
+            GroupDao dao = new GroupDao();
+            dao.Update(userGroupDTO);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Delete(string id)
+        {
+            GroupDao dao = new GroupDao();
+            dao.Delete(id);
+            return RedirectToAction("Index");
+        }
+    }
+}

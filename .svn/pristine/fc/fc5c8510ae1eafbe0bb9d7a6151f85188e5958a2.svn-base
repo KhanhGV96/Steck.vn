@@ -1,0 +1,101 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.EF;
+using DataModel.Dao;
+using PagedList;
+using MyWebsite.Models;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+
+    public class GroupsController : BaseController
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        // GET: Admin/Groups
+        public ActionResult Index(string SearchString, int page = 1, int pagesize = 5)
+        {
+            IQueryable<UserGroup> model = db.UserGroups;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                model = model.Where(n => n.Name.Contains(SearchString)|| n.ID.Contains(SearchString));
+            }
+            IEnumerable<UserGroup> model1 = model.OrderByDescending(n => n.ID).ToPagedList(page, pagesize);
+            return View(model1);
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            UserGroup ug = new UserGroup();
+            return View(ug);
+        }
+        [HttpPost]
+        public ActionResult Create(UserGroup userGroupDTO)
+        {
+            GroupDao groupDao = new GroupDao();
+            groupDao.Insert(userGroupDTO);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+
+            return View(db.UserGroups.SingleOrDefault(n => n.ID == id));
+        }
+        [HttpPost]
+        public ActionResult Edit(UserGroup userGroupDTO)
+        {
+            GroupDao dao = new GroupDao();
+            dao.Update(userGroupDTO);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Delete(string id)
+        {
+            GroupDao dao = new GroupDao();
+            dao.Delete(id);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Update()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Update(FormCollection fc)
+        {
+            Reflection refe = new Reflection();
+            List<Type> lstController = refe.GetControllers("OnlineShop.Areas.Admin.Controllers");
+            foreach (var itemController in lstController)
+            {
+                string ReplaceController = itemController.Name;
+                ReplaceController = ReplaceController.Replace("Controller", "");
+                List<string> lstAction = refe.GetActions(itemController);
+                using(var db = new OnlineShopDataContext())
+                {
+                    foreach (var itemAction in lstAction)
+                    {
+                        if(db.Roles.Where(n => n.ID == (itemAction + "-" + ReplaceController)).Count() <= 0)
+                        {
+                            Role rl = new Role();
+                            rl.ID = itemAction + "-" + ReplaceController;
+                            db.Roles.Add(rl);
+                            db.SaveChanges();
+                            if(db.Credentials.Where(n => n.RoleID == (itemAction + "-" + ReplaceController)).Count() <= 0)
+                            {
+                                Credential credential = new Credential();
+                                credential.RoleID = itemAction + "-" + ReplaceController;
+                                credential.UserGroupID = "ADMIN";
+                                db.Credentials.Add(credential);
+                                db.SaveChanges();
+                            }
+                        }
+                    }
+                }
+            }
+            return RedirectToAction("Index");
+        }
+    }
+}

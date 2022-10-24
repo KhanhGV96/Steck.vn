@@ -1,0 +1,54 @@
+﻿
+@model PagedList.IPagedList<DataModel.EF.UserGroup>
+@using PagedList
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Quản Lý Nhóm Quyền";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+<p style="padding-bottom:20px;">
+    @Html.ActionLink("+ Thêm Mới", "Create", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Cập Nhật Quyền", "Update", null, new { @class = "btn btn-info" })
+</p>
+@using (Html.BeginForm("Index", "Groups", FormMethod.Get, new {@class="form-search"}))
+{
+    @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Tìm Kiếm Nhóm Tài Khoản..!" })
+    <button type="submit" class="btn-submit"><i class="fa fa-search"></i></button>
+}
+    <br />
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.Label("Tên Nhóm Quyền")
+        </th>
+        <th>
+            @Html.Label("Loại Nhóm Quyền")
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="row_@item.ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-success" }) |
+                @Ajax.ActionLink("Xóa", "Delete", new { id = item.ID }, new AjaxOptions
+                    {
+                    Confirm = "Bạn Muốn Xóa Bản Ghi Này ?",
+                    OnComplete = "$('row_" + @item.ID + "').remove()",
+                    HttpMethod = "Get"
+                    }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

@@ -1,0 +1,90 @@
+﻿namespace DataModel.EF
+{
+    using System;
+    using System.Web;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("Product")]
+    public partial class Product
+    {
+        public long ID { get; set; }
+
+        [StringLength(250)]
+        [Display(Name ="Tên Sản Phẩm")]
+        public string Name { get; set; }
+
+        [StringLength(10)]
+        [Display(Name = "Mã Sản Phẩm")]
+        public string Code { get; set; }
+
+        [StringLength(250)]
+        [Display(Name = "Tên Sản Phẩm(Không dấu)")]
+        public string MetaTitle { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        [StringLength(500)]
+        [Display(Name ="Mô Tả")]
+       
+        public string Description { get; set; }
+
+        [StringLength(250)]
+        [Display(Name = "Ảnh")]
+        public string Image { get; set; }
+
+        [Column(TypeName = "xml")]
+        public string MoreImages { get; set; }
+        [Display(Name = "Giá Cũ")]
+        public decimal? Price { get; set; }
+        [Display(Name = "Giá Khuyến Mãi")]
+
+        public decimal? PromotionPrice { get; set; }
+        [Display(Name = "Thuế VAT")]
+
+        public bool? IncludedVAT { get; set; }
+        [Display(Name = "Số Lượng")]
+
+        public int Quantity { get; set; }
+
+        [Display(Name = "Danh Mục")]
+        public long? CategoryID { get; set; }
+
+        [Column(TypeName = "ntext")]
+        [Display(Name = "Chi Tiết")]
+        public string Detail { get; set; }
+        [Display(Name = "Bảo Hành(Tháng)")]
+        public int? Warranty { get; set; }
+
+        [Display(Name = "Ngày Tạo")]
+        public DateTime? CreatedDate { get; set; }
+        
+
+        [StringLength(50)]
+        [Display(Name = "Người Tạo")]
+        
+        public string CreatedBy { get; set; }
+        [Display(Name = "Ngày Cập Nhật")]
+
+        public DateTime? ModifiedDate { get; set; }
+        
+
+        [StringLength(50)]
+        [Display(Name = "Người Cập Nhật")]
+        public string ModifiedBy { get; set; }
+
+        [StringLength(250)]
+        public string MetaKeywords { get; set; }
+
+        [StringLength(250)]
+        public string MetaDescriptions { get; set; }
+
+        [Display(Name = "Trạng Thái")]
+        public bool? Status { get; set; }
+        [Display(Name = "Khuyến Mãi")]
+        public DateTime? TopHot { get; set; }
+        [Display(Name = "Lượt Xem")]
+        public int? ViewCount { get; set; }
+    }
+}

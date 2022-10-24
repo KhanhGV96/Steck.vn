@@ -1,0 +1,19 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+}
+form.form-search {
+    max-width: 20%;
+    position: relative;
+}
+.btn-submit{
+    background-color: #FFF;
+    border: none;
+    border-radius: 50%;
+    position:absolute;
+    top: 6px;
+    left: 2px;
+}
+form.form-search input{
+text-indent: 20px;
+}

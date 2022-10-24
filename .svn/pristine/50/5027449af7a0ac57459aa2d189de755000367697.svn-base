@@ -1,0 +1,515 @@
+﻿
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    *, ::after, ::before {
+        box-sizing: border-box !important;
+    }
+</style>
+<div class="content">
+    <div class="section group">
+        <form method="post" enctype="multipart/form-data" action="/gui-don-hang" onsubmit="return check_field()">
+            <div class="new-cart">
+                <div class="new-cart-title">
+                    <h4>THÔNG TIN GIỎ HÀNG</h4>
+                </div>
+                <div class="new-cart-items">
+                    <div class="cart-button-block">
+                        <a href="/" class="new-cart-continue-shopping-btn"> &lt; Tiếp tục mua hàng </a>
+                    </div>
+                    <div class="cart-button-block" style="float: right;">
+                        <a href="/" class="new-cart-del-shopping-btn"> Xóa giỏ hàng </a>
+                    </div>
+
+
+
+                    <span style="display: none;">
+                    </span>
+
+                    <!---->
+                    <div class="new-cart-items-row js-item-row">
+                        <div class="new-cart-items-img">
+                            <a href="#"><img class="cart-product-img" src="~/Uploads/123a.jpg"></a>
+                        </div>
+                        <div class="new-cart-items-info">
+                            <div>
+                                <a href="#" class="new-cart-items-name">Laptop Asus Gaming GA502DU-AL024T Ryzen7 3750/8Gb/SSD 512/15.6"FHD/GTX 1660Ti Max-Q 6Gb/Win10/Xám</a>
+                            </div>
+                            <div class="new-cart-items-desc">
+                                <p class="m-0"> <b>Mã sản phẩm: </b>LTAU143</p>
+                                <p class="m-0"> <b>Bảo hành: </b> 24 Tháng</p>
+
+
+                                <p class="m-0">
+                                    <b>Khuyến mại:</b>
+                                    Tặng bộ quà trị giá 700K: Tặng Pin sạc dự phòng PIND036/037/038/039 <br> + Đế làm mát laptop DELM245/249<br> +Túi dựng laptop BALO046/CAPD061<br> + Bàn di chuột PADM582
+                                </p>
+
+
+
+                            </div>
+                            <div class="new-cart-items-del">
+                                <a href="javascript:deleteShoppingCartItem('pro','46650','1','32499000')" class="delete-from-cart red"><img src="~/Uploads/new-cart-del.png" style="float: left;">Xóa khỏi giỏ hàng</a>
+                            </div>
+                        </div>
+                        <div class="new-cart-items-checkout">
+                            <span class="new-cart-items-price"><span id="sell_price_pro_46650">32.499.000</span> <u>đ</u> </span>
+
+                            <span class="new-cart-quantity">
+                                <span class="minor" data-id="46650">-</span>
+                                <input name="quantity_pro_46650" id="quantity_pro_46650" value="1" onchange="updatePrice('pro','46650',this.value)" size="5">
+                                <span class="add" data-id="46650">+</span>
+                            </span>
+
+                            <b style="display:none;"><span id="price_pro_46650">32.499.000</span><u>đ</u></b>
+                        </div>
+                    </div>
+
+                    <!---->
+                    <div class="new-cart-items-row js-item-row">
+                        <div class="new-cart-items-img">
+                            <a href="#"><img class="cart-product-img" src="~/Uploads/feature-pic4.jpg"></a>
+                        </div>
+                        <div class="new-cart-items-info">
+                            <a href="#" class="new-cart-items-name">Camera Hành trình YI Dash Camera - Dark grey 2K</a>
+                            <div class="new-cart-items-desc">
+                                <p class="m-0"> <b>Mã sản phẩm: </b>CAHT038</p>
+                                <p class="m-0"> <b>Bảo hành: </b> 12 Tháng</p>
+
+
+                                <p class="m-0">
+                                    <b>Khuyến mại:</b>
+                                    Giá tốt hơn khi mua hàng Online, chi tiết xin gọi: <br> +KD 43 Thái Hà 096.839.1551, 0914.169.845.<br> +KD Lê Thanh Nghị 0911.450.995.<br> +KD 57 Nguyễn Văn Huyên 0936.451.558 .<br> +KD Hải Phòng 0981.6500.22.<br> +KD Hà Đông  0986.650.460.<br> + Kinh doanh dự án 0964.110606
+                                </p>
+
+
+
+                            </div>
+                            <div class="new-cart-items-del">
+                                <a href="javascript:deleteShoppingCartItem('pro','45428','1','1190000')" class="delete-from-cart red"><img src="~/Uploads/new-cart-del.png" style="float: left;">Xóa khỏi giỏ hàng</a>
+                            </div>
+                        </div>
+                        <div class="new-cart-items-checkout d-flex">
+                            <span class="new-cart-items-price"><span id="sell_price_pro_45428">1.190.000</span> <u>đ</u> </span>
+
+                            <span class="new-cart-quantity">
+                                <span class="minor" data-id="45428">-</span>
+                                <input name="quantity_pro_45428" id="quantity_pro_45428" value="1" onchange="updatePrice('pro','45428',this.value)" size="5">
+                                <span class="add" data-id="45428">+</span>
+                            </span>
+
+                            <b style="display:none;"><span id="price_pro_45428">1.190.000</span><u>đ</u></b>
+                        </div>
+                    </div>
+
+                    <!---->
+                    <div class="new-cart-items-row js-item-row">
+                        <div class="new-cart-items-img">
+                            <a href="#"><img class="cart-product-img" src="~/Uploads/feature-pic3.jpg"></a>
+                        </div>
+                        <div class="new-cart-items-info">
+                            <a href="#" class="new-cart-items-name">Camera IMOU Ranger Pro IPC-A26HP IP Wifi 2.0 Megapixel, theo dõi chuyển động, đàm thoại 2 chiều</a>
+                            <div class="new-cart-items-desc">
+                                <p class="m-0"> <b>Mã sản phẩm: </b>CADH171</p>
+                                <p class="m-0"> <b>Bảo hành: </b> 24 Tháng</p>
+
+
+                                <p class="m-0">
+                                    <b>Khuyến mại:</b>
+                                    Tặng thẻ nhớ 32G ( MEST160 ) chi tiết xin gọi;<br> +// KD 43 Thái Hà 096.839.1551, 0914.169.845 <br> +// KD Lê Thanh Nghị 0911.450.995 <br> + //KD 57 Nguyễn Văn Huyên 0936.451.558 <br> +// KD Hải Phòng 0981.6500.22.<br> +// KD Hà Đông 0986.650.460 .<br> +// Kinh doanh dự án 0964.110606
+                                </p>
+
+
+
+                            </div>
+                            <div class="new-cart-items-del">
+                                <a href="javascript:deleteShoppingCartItem('pro','45981','1','1490000')" class="delete-from-cart red"><img src="~/Uploads/new-cart-del.png" style="float: left;">Xóa khỏi giỏ hàng</a>
+                            </div>
+                        </div>
+                        <div class="new-cart-items-checkout d-flex">
+                            <span class="new-cart-items-price"><span id="sell_price_pro_45981">1.490.000</span> <u>đ</u> </span>
+
+                            <span class="new-cart-quantity">
+                                <span class="minor" data-id="45981">-</span>
+                                <input name="quantity_pro_45981" id="quantity_pro_45981" value="1" onchange="updatePrice('pro','45981',this.value)" size="5">
+                                <span class="add" data-id="45981">+</span>
+                            </span>
+
+                            <b style="display:none;"><span id="price_pro_45981">1.490.000</span><u>đ</u></b>
+                        </div>
+                    </div>
+
+
+                    <div class="total-cart">
+                        Tổng tiền đơn hàng :
+                        <strong><span id="total_value">35.179.000</span> <u>đ</u></strong>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end new cart -->
+            <div class="col-md-12" id="new-cart-bottom">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="c3_box user_info">
+                            <div class="title_box_cart"> Thông tin khách hàng</div>
+                            <div class="user_info-item">
+                                <span class="txt2">Họ tên*</span>
+                                <input type="text" name="user_info[name]" id="buyer_name" value="">
+                            </div>
+                            <div class="user_info-item">
+                                <span class="txt2">Email*</span>
+                                <input type="text" name="user_info[email]" id="buyer_email" value="">
+                            </div>
+
+                            <div class="user_info-item">
+                                <span class="txt2">Số điện thoại*</span>
+                                <input type="text" name="user_info[tel]" id="buyer_mobile" value="">
+                                <input type="hidden" name="user_info[mobile]" value="">
+                            </div>
+
+                            <div class="item-form d- user_info-item user_province">
+                                <span class="txt2">Tỉnh/Thành phố</span>
+                                <span class="custom-province">
+                                    <select name="user_info[province]" class="" id="buyer_province" onchange="getDistrict(this.value)">
+                                        <option value="0">--Lựa chọn--</option>
+
+                                        <option value="1">Hà nội</option>
+
+                                        <option value="2">TP HCM</option>
+
+                                        <option value="5">Hải Phòng</option>
+
+                                        <option value="4">Đà Nẵng</option>
+
+                                        <option value="6">An Giang</option>
+
+                                        <option value="7">Bà Rịa-Vũng Tàu</option>
+
+                                        <option value="13">Bình Dương</option>
+
+                                        <option value="15">Bình Phước</option>
+
+                                        <option value="16">Bình Thuận</option>
+
+                                        <option value="14">Bình Định</option>
+
+                                        <option value="8">Bạc Liêu</option>
+
+                                        <option value="10">Bắc Giang</option>
+
+                                        <option value="9">Bắc Kạn</option>
+
+                                        <option value="11">Bắc Ninh</option>
+
+                                        <option value="12">Bến Tre</option>
+
+                                        <option value="18">Cao Bằng</option>
+
+                                        <option value="17">Cà Mau</option>
+
+                                        <option value="3">Cần Thơ</option>
+
+                                        <option value="24">Gia Lai</option>
+
+                                        <option value="25">Hà Giang</option>
+
+                                        <option value="26">Hà Nam</option>
+
+                                        <option value="27">Hà Tĩnh</option>
+
+                                        <option value="30">Hòa Bình</option>
+
+                                        <option value="28">Hải Dương</option>
+
+                                        <option value="29">Hậu Giang</option>
+
+                                        <option value="31">Hưng Yên</option>
+
+                                        <option value="32">Khánh Hòa</option>
+
+                                        <option value="33">Kiên Giang</option>
+
+                                        <option value="34">Kon Tum</option>
+
+                                        <option value="35">Lai Châu</option>
+
+                                        <option value="38">Lào Cai</option>
+
+                                        <option value="36">Lâm Đồng</option>
+
+                                        <option value="37">Lạng Sơn</option>
+
+                                        <option value="39">Long An</option>
+
+                                        <option value="40">Nam Định</option>
+
+                                        <option value="41">Nghệ An</option>
+
+                                        <option value="42">Ninh Bình</option>
+
+                                        <option value="43">Ninh Thuận</option>
+
+                                        <option value="44">Phú Thọ</option>
+
+                                        <option value="45">Phú Yên</option>
+
+                                        <option value="46">Quảng Bình</option>
+
+                                        <option value="47">Quảng Nam</option>
+
+                                        <option value="48">Quảng Ngãi</option>
+
+                                        <option value="49">Quảng Ninh</option>
+
+                                        <option value="50">Quảng Trị</option>
+
+                                        <option value="51">Sóc Trăng</option>
+
+                                        <option value="52">Sơn La</option>
+
+                                        <option value="53">Tây Ninh</option>
+
+                                        <option value="56">Thanh Hóa</option>
+
+                                        <option value="54">Thái Bình</option>
+
+                                        <option value="55">Thái Nguyên</option>
+
+                                        <option value="57">Thừa Thiên-Huế</option>
+
+                                        <option value="58">Tiền Giang</option>
+
+                                        <option value="59">Trà Vinh</option>
+
+                                        <option value="60">Tuyên Quang</option>
+
+                                        <option value="61">Vĩnh Long</option>
+
+                                        <option value="62">Vĩnh Phúc</option>
+
+                                        <option value="63">Yên Bái</option>
+
+                                        <option value="19">Đắk Lắk</option>
+
+                                        <option value="22">Đồng Nai</option>
+
+                                        <option value="23">Đồng Tháp</option>
+
+                                        <option value="21">Điện Biên</option>
+
+                                        <option value="20">Đăk Nông</option>
+
+                                    </select>
+                                </span>
+
+
+                            </div>
+                            <div id="district-holder-login" class="item-form user_info-item">
+                            </div>
+
+
+                            <div class="user_info-item">
+                                <span class="txt2">Địa chỉ*</span>
+                                <textarea id="buyer_address" name="user_info[address]"></textarea>
+                            </div>
+                            <div class="user_info-item">
+                                <span class="">Ghi chú</span>
+                                <textarea name="user_info[note]" id="buyer_note" style="height:100px"></textarea>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="c3_box">
+                            <div class="title_box_cart">Hình thức thanh toán</div>
+                            <table class="tbl_pay" style="font-size: 13px;">
+
+
+                                <tbody>
+                                    <tr>
+                                        <td valign="top"><input type="radio" id="pay_method_2" name="pay_method" value="2" class="pay_option" checked=""></td>
+                                        <td valign="top">
+                                            <div class="txt0"><label for="pay_method_2">Thanh toán tiền mặt khi nhận hàng (tiền mặt / quẹt thẻ ATM, Visa, Master)</label></div>
+
+                                            <div class="pay_content" style="display:none;">
+                                                Quý khách hàng có thể thanh toán bằng tiền mặt hoặc quẹt thẻ sau khi nhận được đầy đủ hàng hóa và đáp ứng chất lượng
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td valign="top"><input type="radio" id="pay_method_8" name="pay_method" value="8" class="pay_option"></td>
+                                        <td valign="top">
+                                            <div class="txt0"><label for="pay_method_8">Thanh toán qua chuyển khoản qua tài khoản ngân hàng (khuyên dùng)</label></div>
+
+                                            <div class="pay_content" style="display:none;">
+                                                <b style="color:red">Quý khách chuyển tiền cho chúng tôi vào một trong các tài khoản sau đây:</b>
+                                                <br><hr>
+                                                <br><b>1. Ngân hàng TMCP Ngoại Thương Việt Nam- Chi nhánh Tây Hồ (Vietcombank)</b>
+                                                <br>-  Tên tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>-  Số tài khoản VND: 0991.000.000.930
+                                                <br><hr>
+                                                <br><b>
+                                                    2. Ngân hàng Nông nghiệp và phát triển Nông thôn Việt Nam- Chi nhánh Hà Nội (
+                                                    <br>Agribank)
+                                                </b>
+                                                <br>- Tên tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số tài khoản VND: 1500.201.082.444
+                                                <br><hr>
+                                                <br><b>3. Ngân hàng TMCP Kỹ Thương Việt Nam – Trung tâm giao dịch Hội sở (Techcombank)</b>
+                                                <br>- Tên tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số TK VND: 108.2361.0928.999
+                                                <br><hr>
+                                                <br><b>4. Ngân hàng TMCP Đầu tư và phát triển Việt Nam- Chi nhánh Cầu Giấy (BIDV)</b>
+                                                <br>- Tên TK: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số TK: 2151.000.1289.241
+                                                <br><hr>
+                                                <br><b>5. Ngân hàng TMCP Á Châu- Chi nhánh Hà Nội (ACB)</b>
+                                                <br>- Tên Tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số TK: 174420119
+                                                <br><hr>
+                                                <br><b>6. Ngân hàng TNHH MTV Standard Chartered Việt Nam </b>
+                                                <br>- Tên Tài khoản:  Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số Tài khoản VND:  88140711268
+                                                <br><hr>
+                                                <br><b>7. Ngân hàng TMCP Tiên Phong- PGD Nam Hà Nội</b>
+                                                <br>- Tên Tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số TK VND: 00118668001
+                                                <br><hr>
+                                                <br><b>8. Ngân hàng Quân Đội - Chi nhánh Định Công</b>
+                                                <br>- Tên Tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số TK VND: 0631100948001
+                                                <br><hr>
+                                                <br><b>9. Ngân hàng TMCP Công Thương Việt Nam</b>
+                                                <br>- Tên Tài khoản: Công ty cổ phần máy tính Hà Nội
+                                                <br>- Số TK VND: 112005156688
+                                                <br><hr>
+                                                <br>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td valign="top"><input type="radio" id="pay_method_4" name="pay_method" value="4" class="pay_option"></td>
+                                        <td valign="top">
+                                            <div class="txt0"><label for="pay_method_4">Thanh toán qua Ngân Lượng (ATM nội địa, Visa, Master)</label></div>
+
+                                            <div class="pay_content" style="display:none;">
+
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td valign="top"><input type="radio" id="pay_method_10" name="pay_method" value="10" class="pay_option"></td>
+                                        <td valign="top">
+                                            <div class="txt0"><label for="pay_method_10">Trả góp qua Alepay (Ngân Lượng)</label></div>
+
+                                            <div class="pay_content" style="display:none;">
+
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div><!--c3_box-->
+                        <!-- <div class="c3_box">
+                <div class="title_box_cart">Hình thức vận chuyển</div>
+                <div>
+                  <table class="tbl_ship">
+
+                    <tr>
+                      <td valign="top"><input type="radio" name='ship_method' value="1"  class="ship_option" /></td>
+                      <td valign="top"><div class="txt0">Vận chuyển tính phí theo thỏa thuận</div>
+                      <div class='ship_content' style="display:none;">Hình thức Vận chuyển tính phí theo thỏa thuận khi đơn hàng có bán kính > 20Km. Quý khách vui lòng thỏa thuận giá vận chuyển với nhân viên tư vấn bán hàng</div></td>
+                    </tr>
+
+                    <tr>
+                      <td valign="top"><input type="radio" name='ship_method' value="2"  class="ship_option" /></td>
+                      <td valign="top"><div class="txt0">Miễn phí trong nội thành Hà Nội</div>
+                      <div class='ship_content' style="display:none;">Hình thức vận chuyển miễn phí trong nội thành Hà Nội</div></td>
+                    </tr>
+
+                    <tr>
+                      <td valign="top"><input type="radio" name='ship_method' value="3"  class="ship_option" /></td>
+                      <td valign="top"><div class="txt0">Miễn phí trong 35 KM</div>
+                      <div class='ship_content' style="display:none;">Hình thức vận chuyển miễn phí trong bán kính 35 km tính từ Công ty.</div></td>
+                    </tr>
+
+                  </table>
+                </div>
+                <div class="clear"></div>-->
+                    </div><!--c3_box-->
+                    <div class="col-md-4">
+                        <div class="c3_box">
+                            <div class="tbl_cart3">
+                                <table id="sum">
+                                    <!-- 351790001-->
+                                    <tbody>
+                                        <tr class="txt_16">
+                                            <td class="txt2">
+                                                <b>Tổng tiền</b>
+                                            </td>
+                                            <td class="txt2 text-right">
+                                                <strong class="total_cart_new">35.179.000 <u>đ</u></strong>
+                                            </td>
+                                        </tr>
+                                        <tr class="txt_16">
+                                            <td class="txt2">
+                                                <b>Thành tiền</b>
+                                            </td>
+                                            <td class="txt2 text-right">
+                                                <strong class="red total_cart_new">35.179.000 <u>đ</u></strong><br>
+                                                <span class="txt_12">(Giá chưa bao gồm VAT)</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clear space2"></div>
+                                <div style="" class="new-cart-button">
+                                    <a href="/ajax/export_download.php?file_type=xls&amp;content_type=shopping-cart" rel="nofollow" class="button button-50 bg-blue">Tải file excel</a>
+                                    <a href="/print/user.php?view=cart" rel="nofollow" class="button button-50 bg-blue" style="    margin-right: 0; width: 50%;">In báo giá</a>
+                                    <a href="javascript:void(0)" onclick="downloadCartImage()" rel="nofollow" class="button button-100 bg-blue">Tải ảnh báo giá</a>
+
+                                    <a class="button button-100 bg-yellow" href="/">Chọn thêm sản phẩm</a>
+
+                                    <a class="button button-100 bg-green" href="/gio-hang?show=tragop&amp;type=cart">Mua trả góp</a>
+
+                                    <input type="submit" class="button button-100 bg-red" value="Đặt hàng">
+                                    <input type="hidden" name="send_order" value="yes">
+                                    <input type="hidden" name="item_update_quantity" id="item_update_quantity" value=",pro-46650,pro-45428,pro-45981,">
+                                    <input type="hidden" name="update_quantity" value="yes">
+                                    <input type="hidden" name="total_cart_value" id="total_cart_value" value="35179000">
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿using DataModel.Dao;
+using OnlineShop.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using OnlineShop.Common;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+    public class AdminLoginController : Controller
+    {
+        // GET: Admin/AdminLogin
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(LoginModel model)
+        {
+            var dao = new UserDao();
+            var result = dao.Login(model.UserName, Encryptor.GetMD5(model.Password));
+            if(ModelState.IsValid)
+            {
+                if(result == 1)
+                {
+                    // lấy ra 1 user có username truyền vào
+                    var user = dao.GetById(model.UserName);
+                    // tạo đối tượng session, 
+
+                    var UserSession = new UserLogin();
+                    UserSession.UserName = user.UserName;
+                    UserSession.UserID = user.ID;
+                    /* khi add session , tham số thứ 2 truyền vào là 1 object nên ta tạo đối tượng UserSession có 2
+                     trường cần lưu trên SESSION đó là username và id, vì vậy muốn gọi sesion này, ta gọi theo lệnh trong
+                     basecontroller
+                    */
+                    // có thể làm như này
+                    //Session['username'] = user.UserName;
+                    //Session['id'] = user.ID
+                    // nhưng như vậy là ta đang create 2 session.
+                    Session.Add(CommonConstants.UserSession, UserSession);
+                    return RedirectToAction("Index", "Home");
+                }
+                else if (result == 0)
+                {
+                    ModelState.AddModelError("", "Tài Khoản Không Tồn Tại");
+                }
+                else if (result == -1)
+                {
+                    ModelState.AddModelError("", "Tài Khoản Đang Bị Khóa");
+                }
+                else if (result == -2)
+                {
+                    ModelState.AddModelError("", "Sai Mật Khẩu, Vui Lòng Nhập Lại");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Đăng Nhập Không Đúng");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Đăng Nhập Không Đúng");
+            }
+            return View("Index");
+        }
+    }
+}

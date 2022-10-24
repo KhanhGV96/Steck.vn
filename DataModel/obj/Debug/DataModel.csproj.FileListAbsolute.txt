@@ -1,0 +1,268 @@
+C:\Users\DuyCT\source\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\DuyCT\source\DataModel\bin\Debug\DataModel.dll
+C:\Users\DuyCT\source\DataModel\bin\Debug\DataModel.pdb
+C:\Users\DuyCT\source\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\DuyCT\source\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DuyCT\source\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\DuyCT\source\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DuyCT\source\DataModel\obj\Debug\DataModel.csprojAssemblyReference.cache
+C:\Users\DuyCT\source\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\DuyCT\source\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+C:\Users\DuyCT\source\DataModel\obj\Debug\DataModel.dll
+C:\Users\DuyCT\source\DataModel\obj\Debug\DataModel.pdb
+C:\Users\DuyCT\source\DataModel\bin\Debug\PagedList.dll
+C:\Users\DuyCT\source\DataModel\bin\Debug\PagedList.Mvc.dll
+C:\Users\DuyCT\source\DataModel\bin\Debug\PagedList.xml
+C:\Users\DuyCT\source\DataModel\bin\Debug\PagedList.Mvc.xml
+E:\project\OnlineShop\DataModel\bin\Debug\DataModel.dll.config
+E:\project\OnlineShop\DataModel\bin\Debug\DataModel.dll
+E:\project\OnlineShop\DataModel\bin\Debug\DataModel.pdb
+E:\project\OnlineShop\DataModel\bin\Debug\EntityFramework.dll
+E:\project\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\OnlineShop\DataModel\bin\Debug\PagedList.dll
+E:\project\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.dll
+E:\project\OnlineShop\DataModel\bin\Debug\EntityFramework.xml
+E:\project\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\OnlineShop\DataModel\bin\Debug\PagedList.xml
+E:\project\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.xml
+E:\project\OnlineShop\DataModel\obj\Debug\DataModel.csprojAssemblyReference.cache
+E:\project\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+E:\project\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+E:\project\OnlineShop\DataModel\obj\Debug\DataModel.dll
+E:\project\OnlineShop\DataModel\obj\Debug\DataModel.pdb
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\DataModel.dll.config
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\DataModel.dll
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\DataModel.pdb
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\EntityFramework.dll
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\PagedList.dll
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.dll
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\EntityFramework.xml
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\PagedList.xml
+D:\OnlineShop\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.xml
+D:\OnlineShop\OnlineShop\DataModel\obj\Debug\DataModel.csprojAssemblyReference.cache
+D:\OnlineShop\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+D:\OnlineShop\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+D:\OnlineShop\OnlineShop\DataModel\obj\Debug\DataModel.dll
+D:\OnlineShop\OnlineShop\DataModel\obj\Debug\DataModel.pdb
+E:\OnlineShop\DataModel\bin\Debug\DataModel.dll.config
+E:\OnlineShop\DataModel\bin\Debug\DataModel.dll
+E:\OnlineShop\DataModel\bin\Debug\DataModel.pdb
+E:\OnlineShop\DataModel\bin\Debug\EntityFramework.dll
+E:\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\OnlineShop\DataModel\bin\Debug\PagedList.dll
+E:\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.dll
+E:\OnlineShop\DataModel\bin\Debug\EntityFramework.xml
+E:\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\OnlineShop\DataModel\bin\Debug\PagedList.xml
+E:\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.xml
+E:\OnlineShop\DataModel\obj\Debug\DataModel.csprojAssemblyReference.cache
+E:\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+E:\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+E:\OnlineShop\DataModel\obj\Debug\DataModel.dll
+E:\OnlineShop\DataModel\obj\Debug\DataModel.pdb
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\DataModel.dll.config
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\DataModel.dll
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\DataModel.pdb
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\EntityFramework.dll
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\PagedList.dll
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.dll
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\EntityFramework.xml
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\PagedList.xml
+C:\Quân\MVC\OnlineShop\DataModel\bin\Debug\PagedList.Mvc.xml
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.dll
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.pdb
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations.smt.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations.st.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations._57.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations._new.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations.ne1.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations.new2.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.Migrations._23072019.resources
+C:\Quân\MVC\OnlineShop\DataModel\obj\Debug\DataModel.csprojAssemblyReference.cache
+D:\TechShop\DataModel\bin\Debug\DataModel.dll.config
+D:\TechShop\DataModel\bin\Debug\DataModel.dll
+D:\TechShop\DataModel\bin\Debug\DataModel.pdb
+D:\TechShop\DataModel\bin\Debug\EntityFramework.dll
+D:\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\TechShop\DataModel\bin\Debug\PagedList.dll
+D:\TechShop\DataModel\bin\Debug\PagedList.Mvc.dll
+D:\TechShop\DataModel\bin\Debug\EntityFramework.xml
+D:\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\TechShop\DataModel\bin\Debug\PagedList.xml
+D:\TechShop\DataModel\bin\Debug\PagedList.Mvc.xml
+D:\TechShop\DataModel\obj\Debug\DataModel.Migrations.init1.resources
+D:\TechShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+D:\TechShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+D:\TechShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+D:\TechShop\DataModel\obj\Debug\DataModel.dll
+D:\TechShop\DataModel\obj\Debug\DataModel.pdb
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\DataModel.dll.config
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\DataModel.dll
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\DataModel.pdb
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.dll
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\PagedList.dll
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\PagedList.Mvc.dll
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.xml
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\PagedList.xml
+D:\Downloads\TechShop\TechShop\DataModel\bin\Debug\PagedList.Mvc.xml
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.csprojAssemblyReference.cache
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.init1.resources
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.dll
+D:\Downloads\TechShop\TechShop\DataModel\obj\Debug\DataModel.pdb
+E:\TechShop\TechShop\DataModel\bin\Debug\DataModel.dll.config
+E:\TechShop\TechShop\DataModel\bin\Debug\DataModel.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\DataModel.pdb
+E:\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\PagedList.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\PagedList.Mvc.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.Mvc.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.Razor.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.dll
+E:\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\PagedList.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\PagedList.Mvc.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.Mvc.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.Razor.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\TechShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.xml
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.csproj.AssemblyReference.cache
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.init1.resources
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.dll
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.pdb
+E:\TechShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.add_introduce_tbl.resources
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\DataModel.dll.config
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\DataModel.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\DataModel.pdb
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\EntityFramework.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\PagedList.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\PagedList.Mvc.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.Mvc.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.Razor.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.dll
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\EntityFramework.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\PagedList.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\PagedList.Mvc.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.Mvc.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.Razor.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\KhanhGVWebShop\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.xml
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.csproj.AssemblyReference.cache
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.init1.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.add_introduce_tbl.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.dll
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.pdb
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl1.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl2.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.InforCompany.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.Solution.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.Document.resources
+E:\KhanhGVWebShop\TechShop\DataModel\obj\Debug\DataModel.Migrations.Project.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\DataModel.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\DataModel.pdb
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.Mvc.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Mvc.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Razor.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.Mvc.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Mvc.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Razor.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.AssemblyReference.cache
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.init1.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.add_introduce_tbl.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl1.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl2.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.InforCompany.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.dll
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.pdb
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.Solution.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.Document.resources
+C:\Users\HAOLV\Downloads\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.Projects.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\DataModel.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\DataModel.pdb
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\itextsharp.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.Mvc.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Mvc.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Razor.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\itextsharp.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\PagedList.Mvc.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Mvc.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.Razor.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.AssemblyReference.cache
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.init1.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.add_introduce_tbl.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl1.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.update_tbl2.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.InforCompany.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.Solution.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.Document.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.Migrations.Projects.resources
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.dll
+C:\Users\HAOLV\Downloads\TechShop (10)\TechShop (9)\TechShop (4)\TechShop (3)\TechShop\DataModel\obj\Debug\DataModel.pdb

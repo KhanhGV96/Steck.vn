@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{915D8DA4-4030-4AC2-A472-6B3E71BDDF5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DataModel</RootNamespace>
+    <AssemblyName>DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Store.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Store.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Store.dbml.layout">
+      <DependentUpon>Store.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\repos\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\repos\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\repos\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\repos\packages\itextsharp.xmlworker.5.5.13.1\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\repos\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\repos\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\AboutDao.cs" />
+    <Compile Include="Dao\CategoryDao.cs" />
+    <Compile Include="Dao\ContactDao.cs" />
+    <Compile Include="Dao\ContentDao.cs" />
+    <Compile Include="Dao\DocumentDao.cs" />
+    <Compile Include="Dao\GroupDao.cs" />
+    <Compile Include="Dao\InforCompanyDao.cs" />
+    <Compile Include="Dao\IntroduceDao.cs" />
+    <Compile Include="Dao\MenuDaCap.cs" />
+    <Compile Include="Dao\OrderDao.cs" />
+    <Compile Include="Dao\ProductCategoryDao.cs" />
+    <Compile Include="Dao\ProductDao.cs" />
+    <Compile Include="Dao\ProjectDao.cs" />
+    <Compile Include="Dao\ReplaceName.cs" />
+    <Compile Include="Dao\SaleDao.cs" />
+    <Compile Include="Dao\SlideDao.cs" />
+    <Compile Include="Dao\SolutionDao.cs" />
+    <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="EF\About.cs" />
+    <Compile Include="EF\Category.cs" />
+    <Compile Include="EF\Colors.cs" />
+    <Compile Include="EF\Contact.cs" />
+    <Compile Include="EF\Content.cs" />
+    <Compile Include="EF\ContentTag.cs" />
+    <Compile Include="EF\Credential.cs" />
+    <Compile Include="EF\Document.cs" />
+    <Compile Include="EF\Feedback.cs" />
+    <Compile Include="EF\Footer.cs" />
+    <Compile Include="EF\InforCompany.cs" />
+    <Compile Include="EF\Introduce.cs" />
+    <Compile Include="EF\Language.cs" />
+    <Compile Include="EF\Menu.cs" />
+    <Compile Include="EF\MenuType.cs" />
+    <Compile Include="EF\OnlineShopDataContext.cs" />
+    <Compile Include="EF\Order.cs" />
+    <Compile Include="EF\OrderDetail.cs" />
+    <Compile Include="EF\Product.cs" />
+    <Compile Include="EF\ProductCategory.cs" />
+    <Compile Include="EF\ProductColor.cs" />
+    <Compile Include="EF\Projects.cs" />
+    <Compile Include="EF\Role.cs" />
+    <Compile Include="EF\Sale.cs" />
+    <Compile Include="EF\Slide.cs" />
+    <Compile Include="EF\Solution.cs" />
+    <Compile Include="EF\sysdiagram.cs" />
+    <Compile Include="EF\SystemConfig.cs" />
+    <Compile Include="EF\Tag.cs" />
+    <Compile Include="EF\User.cs" />
+    <Compile Include="EF\UserGroup.cs" />
+    <Compile Include="Metadata\ProductCategoryMetadata.cs" />
+    <Compile Include="Migrations\201908210623379_init1.cs" />
+    <Compile Include="Migrations\201908210623379_init1.Designer.cs">
+      <DependentUpon>201908210623379_init1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208190415288_add_introduce_tbl.cs" />
+    <Compile Include="Migrations\202208190415288_add_introduce_tbl.Designer.cs">
+      <DependentUpon>202208190415288_add_introduce_tbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208310410180_update_tbl.cs" />
+    <Compile Include="Migrations\202208310410180_update_tbl.Designer.cs">
+      <DependentUpon>202208310410180_update_tbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208310419536_update_tbl1.cs" />
+    <Compile Include="Migrations\202208310419536_update_tbl1.Designer.cs">
+      <DependentUpon>202208310419536_update_tbl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208310454108_update_tbl2.cs" />
+    <Compile Include="Migrations\202208310454108_update_tbl2.Designer.cs">
+      <DependentUpon>202208310454108_update_tbl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209160447052_InforCompany.cs" />
+    <Compile Include="Migrations\202209160447052_InforCompany.Designer.cs">
+      <DependentUpon>202209160447052_InforCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210120224446_Solution.cs" />
+    <Compile Include="Migrations\202210120224446_Solution.Designer.cs">
+      <DependentUpon>202210120224446_Solution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210120228156_Document.cs" />
+    <Compile Include="Migrations\202210120228156_Document.Designer.cs">
+      <DependentUpon>202210120228156_Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210120829110_Projects.cs" />
+    <Compile Include="Migrations\202210120829110_Projects.Designer.cs">
+      <DependentUpon>202210120829110_Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Store.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Store.dbml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PagedList.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908210623379_init1.resx">
+      <DependentUpon>201908210623379_init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208190415288_add_introduce_tbl.resx">
+      <DependentUpon>202208190415288_add_introduce_tbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208310410180_update_tbl.resx">
+      <DependentUpon>202208310410180_update_tbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208310419536_update_tbl1.resx">
+      <DependentUpon>202208310419536_update_tbl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208310454108_update_tbl2.resx">
+      <DependentUpon>202208310454108_update_tbl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209160447052_InforCompany.resx">
+      <DependentUpon>202209160447052_InforCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210120224446_Solution.resx">
+      <DependentUpon>202210120224446_Solution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210120228156_Document.resx">
+      <DependentUpon>202210120228156_Document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210120829110_Projects.resx">
+      <DependentUpon>202210120829110_Projects.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

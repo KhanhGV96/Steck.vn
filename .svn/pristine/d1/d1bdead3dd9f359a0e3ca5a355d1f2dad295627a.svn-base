@@ -1,0 +1,23 @@
+﻿*{
+    margin: 0;
+    padding:0;
+}
+form{
+    width: 53%;
+    margin-left:auto;
+    border: 1px solid #e5e5e5;
+    padding: 25px;
+}
+.card-header{
+    text-align:right;
+    margin-right: 5%;
+    color: red;
+}
+.text-center.animate {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #B81D22;
+    color: #fff;
+    margin: 0;
+    font-family: cursive;
+}

@@ -1,0 +1,92 @@
+﻿@model IPagedList<DataModel.EF.Content>
+@using PagedList.Mvc
+@using PagedList
+
+@{
+    ViewBag.Title = "Quản Lý Tin";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("+ Thêm Mới Tin", "Create", null, new {@class="btn btn-primary" })
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.Label("Tên Bài Vi")
+        </th>
+        <th>
+            @Html.Label("Ảnh Bài Viết")
+        </th>
+        <th>
+            @Html.Label("Danh Mục")
+        </th>
+        <th>
+            @Html.Label("Chi Tiết")
+        </th>
+        <th>
+            @Html.Label("Ngày Tạo")
+        </th>
+        <th>
+            @Html.Label("Trạng Thái")
+        </th>
+        <th>
+            @Html.Label("Sản Phẩm Hot")
+        </th>
+        <th>
+            @Html.Label("Lượt Xem")
+        </th>
+        <th>
+            @Html.Label("Tag")
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr id="row_@item.ID">
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Detail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopHot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViewCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tags)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.ID }) 
+            @Html.ActionLink("Xem Chi Tiết", "Detail", new { id=item.ID }) 
+            @Ajax.ActionLink("Xóa","Delete", new AjaxOptions
+               {
+                   Confirm = "Bạn Có Chắc Chắn Muốn Xóa Bản Ghi Này ?",
+                   OnComplete = "$('#row_"+item.ID+"').remove()",
+                   HttpMethod = "GET",
+
+               })
+        </td>
+    </tr>
+}
+
+</table>
+@Html.PagedListPager(Model ,page => Url.Action("Index", new { page }))

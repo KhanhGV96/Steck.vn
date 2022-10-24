@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataModel.EF;
+
+namespace DataModel.Dao
+{
+
+    public class ProductDao
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        public void Create(Product productDTO, string sessionUser)
+        {
+            var a = DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime dt = DateTime.ParseExact(a, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            productDTO.Code = "SP00" + productDTO.ID;
+            productDTO.MetaTitle = ReplaceName.RemoveVietnameseTone(productDTO.Name);
+            productDTO.CreatedDate = dt;
+            productDTO.CreatedBy = sessionUser;
+            productDTO.MetaDescriptions = ReplaceName.RemoveVietnameseTone(productDTO.Description);
+            db.Products.Add(productDTO);
+            db.SaveChanges();
+        }
+        public void Edit(Product productDTO,string sessionUser)
+        {
+            var a = DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime dt = DateTime.ParseExact(a, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            productDTO.MetaTitle = ReplaceName.RemoveVietnameseTone(productDTO.Name);
+            productDTO.ModifiedDate = dt;
+            productDTO.ModifiedBy = sessionUser;
+            productDTO.MetaDescriptions = ReplaceName.RemoveVietnameseTone(productDTO.Description);
+            db.Entry(productDTO).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+        public void Delete(long id)
+        {
+            var Product = db.Products.FirstOrDefault(n => n.ID == id);
+            db.Products.Remove(Product);
+            db.SaveChanges();
+        }
+    }
+}

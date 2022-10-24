@@ -1,0 +1,122 @@
+﻿@model PagedList.IPagedList<DataModel.EF.Product>
+@using PagedList.Mvc
+@using PagedList
+
+@{
+    ViewBag.Title = "Quản lý Sản Phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p style="padding: 10px 0 10px 0">
+    @Html.ActionLink("+ Thêm Mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
+@using (Html.BeginForm("Index", "Product", FormMethod.Get, new { @class = "form-search" }))
+{
+    @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Tìm Kiếm Tên Sản Phẩm..!" })
+    <button type="submit" class="btn-submit"><i class="fa fa-search"></i></button>
+}
+    <br />
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.Label("Tên Sản Phẩm")
+        </th>
+        <th>
+            @Html.Label("Mã Sản Phẩm")
+        </th>
+        <th>
+            @Html.Label("Ảnh Chính")
+        </th>
+        <th>
+            @Html.Label("Giá Cũ")
+        </th>
+        <th>
+            @Html.Label("Giá Mới")
+        </th>
+        <th>
+            @Html.Label("Số Lượng")
+        </th>
+        <th>
+            @Html.Label("Bảo Hành(Tháng)")
+        </th>
+        <th>
+            @Html.Label("Ngày Tạo")
+        </th>
+        <th>
+            @Html.Label("Người Tạo")
+        </th>
+        <th>
+            @Html.Label("Trạng Thái")
+        </th>
+        <th>
+            @Html.Label("Lượt Xem")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="row_@item.ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                <img src="@item.Image" alt="Anh" style="width:150px; height:120px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PromotionPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Warranty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @{
+                    if (item.Quantity > 0)
+                    {
+                        @Html.Label("Còn Hàng")
+
+                    }
+                    else
+                    {
+                        @Html.Label("Hết Hàng")
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewCount)
+            </td>
+            <td style="text-align: center">
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-warning" })
+                <br />
+                @Html.ActionLink("Xem Chi Tiết", "Detail",new {id =item.ID }, new {@class="btn btn-success" })
+                <br />
+                @Ajax.ActionLink("Xóa", "Delete", new { id = item.ID }, new AjaxOptions
+                   {
+                       Confirm = "Bạn Muốn Xóa Bản Ghi Này ?",
+                       OnComplete = "$('#row_" + @item.ID + "').remove()",
+                       HttpMethod = "GET",
+
+                   }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

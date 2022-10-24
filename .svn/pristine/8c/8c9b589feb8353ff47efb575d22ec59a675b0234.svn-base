@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        Bạn Không Có Quyền Vào Trang Này <a href="/Admin">Trở Lại Trang Trước</a>
+    </div>
+</body>
+</html>

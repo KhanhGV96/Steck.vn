@@ -1,0 +1,26 @@
+﻿$(".btn-active").off('click').on('click', function (e) {
+    e.preventDefault();
+    var btn = $(this);
+    var id = btn.data('id');
+    $.ajax({
+        url: "/Admin/Users/ChangeStatus",
+        data: { id: id },
+        dataType: "json",
+        type: "POST",
+        success: function (res) {
+            if (res.status == true) {
+                btn.text('Đang Sử Dụng');
+            }
+            else {
+                btn.text('Đang Bị Khóa');
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        },
+        complete: function () {
+            console.log("complete");
+        }
+    });
+});
+

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Cập Nhật Toàn Bộ Quyền";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Update", "Groups", FormMethod.Post))
+{
+    @Html.TextBox("Update","Cập Nhật Quyền", new {@type="submit" ,@class="btn btn-primary"})
+}
+

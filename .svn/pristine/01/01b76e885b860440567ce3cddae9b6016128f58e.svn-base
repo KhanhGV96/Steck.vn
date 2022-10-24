@@ -1,0 +1,158 @@
+﻿@model DataModel.EF.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SighUp</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/SignUpCss.css" rel="stylesheet" />
+    <link href="~/Content/fontawesome-free-5.8.2-web/css/all.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="text-center animate">Đăng Ký Tài Khoản</h1>
+    <hr />
+    <div class="validate">
+        <h3 class="alert-danger text-center"></h3>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+
+                    <div class="card-body">
+                        @using (Html.BeginForm("SighUp", "Login", FormMethod.Post, new { @class = "form-horizontal", @name = "myForm", @id = "myForm" }))
+                        {
+                                @Html.AntiForgeryToken()
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Họ Và Tên</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Họ và Tên..!", @required = "" }, @id = "name" })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Email</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Email..!", @required = "",@type="email" }, @id = "email" })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="cols-sm-2 control-label">Tên Tài Khoản</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+
+                                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Tên Tài Khoản..!", @required = "" }, @id = "username" })
+                                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="cols-sm-2 control-label">Mật Khẩu</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+
+                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Mật Khẩu..!", @required = "", @type = "password",minlength = 6 }, @id = "password" })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm" class="cols-sm-2 control-label">Nhập Lại Mật Khẩu</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="confirm" id="confirm" required="" placeholder="Xác Nhận Mật Khẩu..!" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password" class="cols-sm-2 control-label">Số Điện Thoại</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+
+                                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Số Điện Thoại..!", @required = "" }, @id = "phone" })
+                                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="cols-sm-2 control-label">Địa Chỉ(Thôn-Xã-Huyện)</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-map-marker" aria-hidden="true"></i></span>
+                                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Số Địa Chỉ..!", @required = "" }, @id = "address" })
+                                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group ">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Đăng Ký</button>
+                                </div>
+                                <div class="login-register aligncenter text-center">
+                                    <span>Đã có tài khoản ? <a href="/Login/Index"><b>Đăng Nhập</b></a></span>
+                                </div>
+                            }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#myForm").submit(function () {
+                var x = document.forms['myForm'];
+                var pass1 = x['Password'].value;
+                var pass2 = x['confirm'].value;
+                if (pass1 != pass2) {
+                    $(".alert-danger").text(" * Xác Nhận Mật Khẩu Không Chính Xác. Mời Nhập Lại !");
+                    return false;
+                }
+                else {
+                    var username = $("input#UserName").val();
+                    var password = $("input#Password").val();
+                    username = username.toLowerCase();
+                    password = password.toLowerCase();
+                    var myarr = ["à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă", "ằ", "ắ", "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề", "ế", "ệ", "ể", "ễ", "ì", "í", "ị", "ỉ", "ĩ", "ò", "ó", "ọ", "ỏ", "õ", "ô", "ồ", "ố", "ộ", "ổ", "ỗ", "ơ", "ờ", "ớ", "ợ", "ở", "ỡ", "ù", "ú", "ụ", "ủ", "ũ", "ư", "ừ", "ứ", "ự", "ử", "ữ", "ỳ", "ý", "ỵ", "ỷ", "ỹ", "đ", " "];
+                    for (var i = 0; i < myarr.length; i++) {
+                        if (username.includes(myarr[i]) == true || password.includes(myarr[i]) == true) {
+                            $(".alert-danger").text('Tài Khoản Hoặc Mật Khẩu Không Có Tiếng Việt Nhé, Mời Nhập Lại !');
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            });
+        })
+        
+    </script>
+</body>
+</html>
+
+
+
+
+

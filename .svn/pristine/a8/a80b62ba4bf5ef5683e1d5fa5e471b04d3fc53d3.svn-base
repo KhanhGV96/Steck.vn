@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.Dao;
+using DataModel.EF;
+using OnlineShop.Common;
+using PagedList;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+    public class UsersController : BaseController
+    {
+        // GET: Admin/Users
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        public ActionResult Index(string SearchString,int page = 1, int pageSize = 5)
+        {
+            UserDao dao = new UserDao();
+            /*var model = db.Users.ToPagedList(Page, PageSize);*/
+            return View(dao.GetListUser(SearchString,page, pageSize));
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            var result = db.UserGroups.ToList();
+            var LstUserGroup = new SelectList(result, "ID", "Name");
+            ViewBag.LstUserGroup = LstUserGroup;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(User userDTO)
+        {
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            string sessionUserName = session.UserName;
+            var dao = new UserDao();
+            dao.Insert(userDTO, sessionUserName);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+           var ListUserGroups = db.UserGroups.ToList();
+            SelectList selectListsGR = new SelectList(ListUserGroups, "ID", "Name");
+            ViewBag.selectListsGR = selectListsGR;
+            List<SelectListItem> ListStaTus = new List<SelectListItem>()
+            {
+                new SelectListItem(){ Value = "1", Text = "Hoạt Động"},
+                new SelectListItem(){ Value = "-1", Text = "Khóa"},
+                new SelectListItem(){ Value = "-2", Text = "Dừng Hoạt Động"}
+            };
+            ViewBag.LstStatus = ListStaTus;
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            ViewBag.Session = session.UserName;
+            return View(db.Users.FirstOrDefault(n => n.ID == id));
+        }
+        [HttpPost]
+        public ActionResult Edit(User UserDTO)
+        {
+            var dao = new UserDao();
+            dao.Edit(UserDTO);
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(long id)
+        {
+            new UserDao().Delete(id);
+            return RedirectToAction("Index");
+        }
+    }
+}

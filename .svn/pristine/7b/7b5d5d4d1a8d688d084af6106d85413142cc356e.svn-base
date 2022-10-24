@@ -1,0 +1,137 @@
+﻿@model PagedList.IPagedList<DataModel.EF.ProductCategory>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Quản Lý Danh Mục Sản Phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p style="padding: 10px 0px 10px 0px;">
+    @Html.ActionLink("+ Thêm Mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
+@using (Html.BeginForm("Index", "ProductCategory", FormMethod.Get, new { @class = "form-search" }))
+{
+    @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Tìm Kiếm..!" })
+    <button type="submit" class="btn-submit"><i class="fa fa-search"></i></button>
+}
+    <br />
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.Label("Tên Danh Mục")
+        </th>
+        <th>
+            @Html.Label("Tên Danh Mục(Không Dấu)")
+        </th>
+        <th>
+            @Html.Label("Id Cha")
+        </th>
+        <th>
+            @Html.Label("Hiển Thị")
+        </th>
+        <th>
+            @Html.Label("Tiêu Đề SEO")
+        </th>
+        <th>
+            @Html.Label("Ngày Tạo")
+        </th>
+        <th>
+            @Html.Label("Người Tạo")
+        </th>
+        <th>
+            @Html.Label("Ngày Cập Nhật")
+        </th>
+        <th>
+            @Html.Label("Người Cập Nhật")
+        </th>
+        <th>
+            @Html.Label("MeTaKeyWords")
+        </th>
+        <th>
+            @Html.Label("Mô Tả")
+        </th>
+        <th>
+            @Html.Label("Trạng Thái")
+        </th>
+        <th>
+            @Html.Label("Hiển Thị")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="row_@item.ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeoTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaKeywords)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaDescriptions)
+            </td>
+            <td>
+                @{
+                    if (item.Status == true)
+                    {
+                        @Html.Label("Đang Sử Dụng")
+                    }
+                    else
+                    {
+                        @Html.Label("Không Sử Dụng")
+                    }
+                }
+            </td>
+            <td>
+                @{
+                    if (item.ShowOnHome == true)
+                    {
+                        @Html.Label("Có Hiển Thị Ra Trang Chủ")
+                    }
+                    else
+                    {
+                        @Html.Label("Không Hiển Thị Ra Trang Chủ")
+                    }
+                }
+
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-success" }) |
+                @Ajax.ActionLink("Xóa", "Delete", new { id = item.ID }, new AjaxOptions
+                {
+                Confirm = "Bạn Muốn Xóa Bản Ghi Này ?",
+                OnComplete = "$('#row_" + @item.ID + "').remove()",
+                HttpMethod = "Get"
+                }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

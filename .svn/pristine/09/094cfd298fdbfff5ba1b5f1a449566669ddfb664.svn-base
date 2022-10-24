@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.EF;
+using DataModel.Dao;
+using PagedList;
+using OnlineShop.Common;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+
+    public class ProductController : BaseController
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        // GET: Admin/Product
+        public ActionResult Index(long? id,string SearchString, int page = 1, int pageSize = 5)
+        {
+
+            IQueryable<Product> model = db.Products;
+            if(id == null)
+            {
+                if (!string.IsNullOrEmpty(SearchString))
+                {
+                    model = model.Where(n => n.CategoryID == id && n.Name.Contains(SearchString));
+                }
+                IEnumerable<Product> model2 = model.OrderBy(n => n.CreatedDate).ToPagedList(page, pageSize);
+                return View(model2);
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(SearchString))
+                {
+                    model = model.Where(n => n.CategoryID == id && n.Name.Contains(SearchString));
+                }
+                else
+                {
+                    model = model.Where(n => n.CategoryID == id);
+                }
+                IEnumerable<Product> model2 = model.OrderBy(n => n.CreatedDate).ToPagedList(page, pageSize);
+                return View(model2);
+            }
+            
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            ViewBag.Category = new SelectList(db.ProductCategories.ToList(), "ID", "Name");
+            return View();
+        }
+        [HttpPost]
+        // cái này để lưu html vào db mà không cần dùng [allowhtml]
+        [ValidateInput(false)]
+        public ActionResult Create(Product productDTO)
+        {
+            ProductDao dao = new ProductDao();
+            var sesion = (UserLogin)Session[CommonConstants.UserSession];
+            dao.Create(productDTO, sesion.UserName);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            var abc = db.ProductCategories.ToList();
+            SelectList selectListsCate = new SelectList(abc, "ID", "Name");
+            ViewBag.lstCate = selectListsCate;
+            var product = db.Products.FirstOrDefault(n => n.ID == id);
+            foreach (var item in abc)
+            {
+                SelectList selectLists = new SelectList(abc, "ID", "Name", (db.Products.FirstOrDefault(n => n.ID == id)).CategoryID == item.ID);
+            }
+            return View(product);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Edit(Product productDTO)
+        {
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            string sessionUser = session.UserName;
+            ProductDao dao = new ProductDao();
+            dao.Edit(productDTO, sessionUser);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Delete(long id)
+        {
+            var dao = new ProductDao();
+            dao.Delete(id);
+            return RedirectToAction("Index");
+        }
+    }
+}

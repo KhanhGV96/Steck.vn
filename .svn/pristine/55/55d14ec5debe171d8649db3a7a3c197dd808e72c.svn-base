@@ -1,0 +1,137 @@
+﻿@model PagedList.IPagedList<DataModel.EF.User>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Danh Sách Tài Khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    @ViewBag.Title
+</h2>
+
+<p style="padding:10px 0 10px 0">
+    @Html.ActionLink("Thêm Mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
+@using (Html.BeginForm("Index", "Users", FormMethod.Get,new {@class="form-search" }))
+{
+    @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Tìm Kiếm..!" })
+    <button type="submit" class="btn-submit"><i class="fa fa-search"></i></button>
+}
+    <br />
+<table class="table table-bordered" style="width:100%">
+    <tr>
+        <th>
+            @Html.Label("Tên Tài Khoản")
+        </th>
+        <th>
+            @Html.Label("Mật Khẩu")
+        </th>
+        <th>
+            @Html.Label("Loại Nhóm Quyền")
+        </th>
+        <th>
+            @Html.Label("Tên")
+        </th>
+        <th>
+            @Html.Label("Địa Chỉ")
+        </th>
+        <th>
+            @Html.Label("Email")
+        </th>
+        <th>
+            @Html.Label("Số Điện Thoại")
+        </th>
+        <th>
+            @Html.Label("Mã Tỉnh")
+        </th>
+        <th>
+            @Html.Label("Mã Huyện")
+        </th>
+        <th>
+            @Html.Label("Ngày Tạo")
+        </th>
+        <th>
+            @Html.Label("Người Tạo")
+        </th>
+        <th>
+            @Html.Label("Ngày Cập Nhật")
+        </th>
+        <th>
+            @Html.Label("Người Cập Nhật")
+        </th>
+        <th>
+            @Html.Label("Trạng Thái")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="row_@item.ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProvinceID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DistrictID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @{
+                    if (item.Status == true)
+                    {
+                        @Html.Label("Đang Sử Dụng");
+                    }
+                    else
+                    {
+                        @Html.Label("Không Sử Dụng")
+                    }
+                }
+
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-success" }) |
+                @*@Html.ActionLink("Xóa", "Delete", new { id=item.ID },new {@class="btn btn-danger" })*@
+                @Ajax.ActionLink("Xóa", "Delete", new { id = item.ID }, new AjaxOptions
+                {
+               Confirm = "Bạn Muốn Xóa Bản Ghi Này ?",
+               OnComplete = "$('row_" + @item.ID + "').remove()",
+               HttpMethod = "Get"
+           }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

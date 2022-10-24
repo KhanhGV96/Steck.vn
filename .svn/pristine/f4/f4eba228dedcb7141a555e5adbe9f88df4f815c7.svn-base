@@ -1,0 +1,57 @@
+﻿using DataModel.Dao;
+using DataModel.EF;
+using OnlineShop.Areas.Admin.Models;
+using OnlineShop.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+    [AuthorizeAdmin]
+    public class ContentController : BaseController
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        // GET: Admin/Content
+        public ActionResult Index(string SearchString, int page = 1, int pageSize = 5)
+        {
+            var dao = new ContentDao();
+            var lst = dao.GetListNew(SearchString, page, pageSize);
+            return View(lst);
+        }
+        public ActionResult Detail(long id)
+        {
+            ViewBag.content = db.Categories.FirstOrDefault().Name;
+            var dao = new ContentDao();
+            return View(dao.Detail(id));
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Content content)
+        {
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            var dao = new ContentDao();
+            dao.Create(content, session.UserName);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            return View(db.Contents.FirstOrDefault(n =>n.ID == id));
+        }
+        [HttpPost]
+        public ActionResult Edit(Content content)
+        {
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            var dao = new ContentDao();
+            dao.Edit(content, session.UserName);
+            return RedirectToAction("Index");
+        }
+    }
+}

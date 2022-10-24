@@ -1,0 +1,123 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<DataModel.EF.Category>
+
+@{
+    ViewBag.Title = "Quản Lý Loại Tin";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p style="padding: 10px 0px 10px 0px;">
+    @Html.ActionLink("+ Thêm Mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
+@using (Html.BeginForm("Index", "Category", FormMethod.Get, new { @class = "form-search" }))
+{
+    @Html.TextBox("SearchString", null, new { @class = "form-control", @placeholder = "Tìm Kiếm Danh Mục Tin..!" })
+    <button type="submit" class="btn-submit"><i class="fa fa-search"></i></button>
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.Label("Tên Loại Tin")
+        </th>
+        <th>
+            @Html.Label("ParentID")
+        </th>
+        <th>
+            @Html.Label("Tiêu Đề SEO")
+        </th>
+        <th>
+            @Html.Label("Ngày Tạo")
+        </th>
+        <th>
+            @Html.Label("Người Tạo")
+        </th>
+        <th>
+            @Html.Label("Ngày Cập Nhật")
+        </th>
+        <th>
+            @Html.Label("Người Cập Nhật")
+        </th>
+        <th>
+            @Html.Label("Trạng Thái")
+        </th>
+        <th>
+            @Html.Label("Hiển Thị Ra Trang Chủ")
+        </th>
+        <th>
+            @Html.Label("Ngôn Ngữ")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="row_@item.ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.SeoTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @{
+                    if (item.Status == true)
+                    {
+                        @Html.Label("Đang Sử Dụng")
+                    }
+                    else
+                    {
+                        @Html.Label("Không Sử Dụng")
+                    }
+                }
+            </td>
+            <td>
+                @{
+                    if (item.ShowOnHome == true)
+                    {
+                        @Html.Label("Có")
+                    }
+                    else
+                    {
+                        @Html.Label("Không")
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Language)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-success" }) |
+                @Ajax.ActionLink("Xóa", "Delete", new { id = item.ID }, new AjaxOptions
+               {
+                   Confirm = "Bạn Chắc Chắn Muốn Xóa Bản Ghe Này ?",
+                   OnComplete = "$('#row_" + item.ID + "').remove()",
+                   HttpMethod = "Get",
+               }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+

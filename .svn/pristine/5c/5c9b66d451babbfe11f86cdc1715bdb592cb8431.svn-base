@@ -1,0 +1,27 @@
+﻿@model IPagedList<DataModel.EF.Product>
+@using PagedList
+@using PagedList.Mvc
+
+
+@foreach (var item in Model)
+{
+    <div class="grid_1_of_4 images_1_of_4">
+        <a href="@Url.Action("Details","Products",new { @id = item.ID })"><img src="@item.Image" alt="image" /></a>
+        <h2>@item.Name </h2>
+        <div class="price-details">
+            <div class="price-number">
+                <p><span class="rupees">@item.Price</span></p>
+            </div>
+            <div class="add-cart">
+                <h4><a href="#">Add to Cart</a></h4>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+}
+    <div style="position: absolute; bottom: -100px; right: 18px; ">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("GetDataByPagging", new { page}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(
+            new AjaxOptions() { UpdateTargetId = "page-divide" }
+            ))
+    </div>

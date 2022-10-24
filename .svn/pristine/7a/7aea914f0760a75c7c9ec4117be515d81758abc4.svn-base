@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DataModel.EF.ProductCategory>
+
+<ul>
+    <h3>Categories</h3>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "GetProductByCategoryID", "Products", new { id = item.ID },"")</li>
+    }
+    @*<li><a href="#">Mobile Phones</a></li>
+    <li><a href="#">Desktop</a></li>
+    <li><a href="#">Laptop</a></li>
+    <li><a href="#">Accessories</a></li>
+    <li><a href="#">Software</a></li>
+    <li><a href="#">Sports &amp; Fitness</a></li>
+    <li><a href="#">Footwear</a></li>
+    <li><a href="#">Jewellery</a></li>
+    <li><a href="#">Clothing</a></li>
+    <li><a href="#">Home Decor &amp; Kitchen</a></li>
+    <li><a href="#">Beauty &amp; Healthcare</a></li>
+    <li><a href="#">Toys, Kids &amp; Babies</a></li>*@
+</ul>

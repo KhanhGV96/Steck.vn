@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "NewsDetail";
+    Layout = "~/Views/Shared/Product.cshtml";
+}
+<style>
+    #new-details {
+    background-color: #f7f7fb;
+    }
+
+    #new-details h1 {
+    font-size: 27px;
+    color: #B81D22;
+    margin: 10px 20px 16px 0px;
+    font-weight: 600;
+    }
+
+    #new-details h5 {
+    color: #999;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    }
+
+    #new-details h5 a {
+    color: #999;
+    }
+
+    #new-details div {
+    margin-top: 20px;
+    }
+
+    #new-details div p {
+    margin: 20px 0px;
+    }
+
+    #new-details div p:first-child {
+     margin-top: 0px;
+    }
+
+    #new-details div .image {
+    text-align: center;
+    margin: 15px 0;
+    }
+
+    #new-details div .image img {
+    text-align: center;
+    max-width: 660px;
+    }
+
+    #related-post {
+    padding-left: 10px;
+    }
+
+    #related-post h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #FFF;
+    padding: 10px;
+    background: #B81D22;
+    text-transform: uppercase;
+    }
+
+    #related-post div img {
+    max-height: 350px;
+    width: 100%;
+    }
+
+    #related-post .image{
+    border: 1px solid #EEE;
+    border-bottom: none;
+    }
+    #related-post .image:last-child{
+    border-bottom:1px solid #EEE;
+    }
+
+    #related-post .image div {
+    text-align: left;
+    margin-bottom: 16px;
+    
+    }
+    #related-post .image img{
+    width: 317px;
+    height: 181px;
+    margin-top:10px;
+    margin:0 20px;
+
+    }
+    #related-post .image a {
+    color: black;
+    font-size: 20px;
+    font-weight:600;
+    text-decoration: none;
+    display: block;
+    margin:16px 20px 0;
+    
+    }
+
+    #related-post .image a:hover {
+    color: #B81D22;
+    }
+</style>
+
+<div class="row" style="font-family: Arial, Helvetica, sans-serif">
+    <div class="col-sm-8" id="new-details">
+        <h1>LOREM IPSUM IS SIMPLY DUMMY TEXT LOREM IPSUM IS SIMPLY DUMMY TEXT</h1>
+        <h5>Posted on Aug 13th, 2013 by <a href="#">Finibus Bonorum</a></h5>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur [....]
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur [....]
+            </p>
+            <p class="image">
+                <img src="~/Uploads/newsimg1.jpg" alt="Alternate Text" />
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur [....]
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur [....]
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-4" id="related-post">
+        <h2>Related Post</h2>
+        <div class="image">
+            <div>
+                <img src="~/Uploads/newsimg1.jpg" alt="Alternate Text" />
+                <a href="#" title="LOREM IPSUM IS SIMPLY DUMMY TEXT">LOREM IPSUM IS SIMPLY DUM MY TEXT</a>
+            </div>
+        </div>
+        <div class="image">
+            <div>
+                <img src="~/Uploads/newsimg1.jpg" alt="Alternate Text" />
+                <a href="#" title="LOREM IPSUM IS SIMPLY DUMMY TEXT">LOREM IPSUM IS SIMPLY DUM MY TEXT</a>
+            </div>
+        </div>
+        <div class="image">
+            <div>
+                <img src="~/Uploads/newsimg1.jpg" alt="Alternate Text" />
+                <a href="#" title="LOREM IPSUM IS SIMPLY DUMMY TEXT">LOREM IPSUM IS SIMPLY DUM MY TEXT</a>
+            </div>
+        </div>
+        <div class="image">
+            <div>
+                <img src="~/Uploads/newsimg1.jpg" alt="Alternate Text" />
+                <a href="#" title="LOREM IPSUM IS SIMPLY DUMMY TEXT">LOREM IPSUM IS SIMPLY DUM MY TEXT</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

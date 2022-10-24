@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DataModel.EF.ProductCategory>
+
+<ul>
+    <h3>Categories</h3>
+    @foreach (var item in Model)
+    {
+        <li class="dropdown">
+            @Html.ActionLink(item.Name, "GetProductByCategoryID", "Products", new { id = item.ID }, new { @class="dropdown-toggle", role = "button", data_toggle = "dropdown" ,aria_haspopup = "true" ,aria_expanded = "false" })
+            @Html.Action("Loadchild", "ProductCategories",new {parentID =  item.ID})
+        </li>
+
+    }
+</ul>

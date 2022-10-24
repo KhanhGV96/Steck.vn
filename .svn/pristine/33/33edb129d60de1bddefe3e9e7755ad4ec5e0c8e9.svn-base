@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.EF;
+using OnlineShop.Common;
+
+namespace OnlineShop.Areas.Admin.Models
+{
+    public class AuthorizeAdmin : ActionFilterAttribute
+    {
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+
+            string role = filterContext.ActionDescriptor.ActionName + "-" + filterContext.ActionDescriptor.ControllerDescriptor.ControllerName;
+            if (role == "Login-Home" || role == "NoAuthorticate-Home" || role == "Logout-Home")
+            {
+                return;
+            }
+
+            string redirectUnAuthor = "~/Admin/Home/NoAuthorticate";
+            //Trang quản trị admin
+            var sesstion = filterContext.HttpContext.Session.Contents[CommonConstants.UserSession];
+            if (sesstion == null)
+            {
+                filterContext.Result = new RedirectResult("~/Admin/AdminLogin/Index");
+                return;
+            }
+            UserLogin acc = sesstion as UserLogin;
+            if (acc == null)
+            {
+                filterContext.Result = new RedirectResult("~/Admin/AdminLogin/Index");
+                return;
+            }
+
+            using (var db = new OnlineShopDataContext())
+            {
+                //Kiểm tra có quyền  hay ko
+                //var query = from userRole in db.UserRoles
+                //            join roles in db.Roles on userRole.RoleId equals roles.Id
+                //            join roleGroup in db.RoleGroups on roles.RoleGroupId equals roleGroup.Id
+                //            where userRole.AccountId == acc.Id_Account && roleGroup.AreaName == _Namespace
+                //            select new { controler = roleGroup.RoleGroupCode, action = roles.RoleCode };
+                var query = from user in db.Users
+                            join UserGroup in db.UserGroups on user.GroupID equals UserGroup.ID
+                            join credential in db.Credentials on UserGroup.ID equals credential.UserGroupID
+                            where user.UserName == acc.UserName
+                            select new { credential.RoleID };
+
+                if (query.Count() > 0)
+                {
+                    List<string> listRole = query.Select(n => n.RoleID).ToList();
+
+                    if (!listRole.Contains(role))
+                    {
+                        filterContext.Result = new RedirectResult(redirectUnAuthor);
+                        return;
+                    }
+                }
+                else
+                {
+                    filterContext.Result = new RedirectResult(redirectUnAuthor);
+                    return;
+                }
+            }
+        }
+    }
+}

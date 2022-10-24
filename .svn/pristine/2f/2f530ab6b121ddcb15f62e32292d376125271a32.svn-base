@@ -1,0 +1,23 @@
+﻿
+
+@{
+    ViewBag.Title = "GetProductByCategoryID";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3>@ViewBag.CategoryName</h3>
+        </div>
+        <div class="see">
+            <p><a href="#">See all Products</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section group" style="position: relative; margin-bottom: 50px;" id="page-divide">
+        @{ Html.RenderAction("GetDataByPagging", new { page = 1, id = ViewBag.Id }); }
+
+        
+    </div>
+</div>

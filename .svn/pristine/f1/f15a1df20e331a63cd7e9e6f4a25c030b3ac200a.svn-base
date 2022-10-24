@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DataModel.EF.ProductCategory>
+
+@if ((int)ViewBag.Count > 0)
+{
+    <ul class="dropdown-menu">
+
+        @foreach (var item in Model)
+        {
+            <li>
+                @Html.ActionLink(item.Name, "GetProductByCategoryID", "Products", new { id= item.ID }, null)
+                @Html.Action("Loadchild", "ProductCategories", new { parentID = item.ID })
+            </li>
+        }
+    </ul>
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OnlineShop" Class="StoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M8VC9M5\SQLEXPRESS;Initial Catalog=OnlineShop;Integrated Security=True" SettingsObjectName="DataModel.Properties.Settings" SettingsPropertyName="OnlineShopConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SP_GET_ORDER_BY_SHIPNAME" Method="SP_GET_ORDER_BY_SHIPNAME">
+    <Parameter Name="SHIP_NAME" Parameter="sHIP_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="SP_GET_ORDER_BY_SHIPNAMEResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShipName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShipMobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShipAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShipEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

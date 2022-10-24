@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using DataModel.EF;
+using DataModel.Dao;
+using OnlineShop.Common;
+using OnlineShop.Areas.Admin.Models;
+
+namespace OnlineShop.Areas.Admin.Controllers
+{
+    // Chưa Tạo View Detail
+    [AuthorizeAdmin]
+    public class ProductCategoryController : BaseController
+    {
+        OnlineShopDataContext db = new OnlineShopDataContext();
+        // GET: Admin/ProductCategory
+        public ActionResult Index(string SearchString, int page = 1, int pageSize = 5)
+        {
+
+            var dao = new ProductCategoryDao();
+            var result = dao.GetProductCategory(SearchString,page, pageSize);
+            ViewBag.ProCate = db.ProductCategories.ToList();
+            return View(result);
+        }
+        [HttpGet]
+        public ActionResult Detail(long id)
+        {
+            var proParent = db.ProductCategories.FirstOrDefault(n => n.ID == id);
+            ViewBag.CateProParent = proParent.Name;
+            return View(proParent);
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(ProductCategory productCategoryDTO)
+        {
+            var dao = new ProductCategoryDao();
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            var SessionUsername = session.UserName;
+            dao.Create(productCategoryDTO, SessionUsername);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            using(var db = new OnlineShopDataContext())
+            {
+                return View(db.ProductCategories.FirstOrDefault(n => n.ID == id));
+            }
+        }
+        [HttpPost]
+        public ActionResult Edit(ProductCategory productCategoryDTO)
+        {
+            var dao = new ProductCategoryDao();
+            var session = (UserLogin)Session[CommonConstants.UserSession];
+            var SessionUsername = session.UserName;
+            dao.Edit(productCategoryDTO, SessionUsername);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Delete(long id)
+        {
+            var dao = new ProductCategoryDao();
+            dao.Delete(id);
+            return RedirectToAction("Index");
+        }
+    }
+}
